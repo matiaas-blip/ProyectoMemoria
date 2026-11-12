@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="50 años de Memoria, Verdad y Justicia. Un espacio para recordar la historia argentina.">
+
+    <title>50 años | Memoria, Verdad y Justicia</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER / NAVBAR -->
+    <header class="header">
+        <nav class="navbar">
+            <a href="#inicio" class="logo">MEMORIA <span>1976—2026</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#participar">Participar</a></li>
+            </ul>
+
+            <a href="#historia" class="nav-button">Conocer más</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="hero-date">24 DE MARZO · 1976 — 2026</span>
+
+                <h1>
+                    50 años.<br>
+                    Memoria, Verdad<br>
+                    y Justicia.
+                </h1>
+
+                <p>
+                    Recordar nuestra historia es defender la democracia.
+                    La memoria es una construcción colectiva que permanece
+                    viva en cada generación.
+                </p>
+
+                <a href="#historia" class="primary-button">
+                    Descubrir nuestra historia
+                </a>
+            </div>
+        </section>
+
+        <!-- CONTADOR -->
+        <section class="counter-section">
+            <p>Desde aquel 24 de marzo de 1976</p>
+            <h2 id="counter">50 años</h2>
+            <p>Memoria, Verdad y Justicia.</p>
+        </section>
+
+        <!-- LINEA DE TIEMPO -->
+        <section id="historia" class="timeline-section">
+            <div class="section-heading">
+                <span>UN RECORRIDO POR NUESTRA HISTORIA</span>
+                <h2>Seis momentos que marcaron nuestro país</h2>
+                <p>Conocer el pasado es fundamental para construir el futuro.</p>
+            </div>
+
+            <div class="timeline">
+
+                <article class="timeline-item">
+                    <span class="timeline-year">1976</span>
+                    <h3>El golpe de Estado</h3>
+                    <p>El 24 de marzo las Fuerzas Armadas derrocan al gobierno constitucional e instauran una dictadura cívico-militar.</p>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-year">1977</span>
+                    <h3>Madres y Abuelas de Plaza de Mayo</h3>
+                    <p>Se organizan para reclamar por sus familiares desaparecidos y buscar a sus nietos.</p>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-year">1983</span>
+                    <h3>El regreso de la democracia</h3>
+                    <p>El 10 de diciembre asume Raúl Alfonsín y comienza una nueva etapa democrática.</p>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-year">1984</span>
+                    <h3>El informe Nunca Más</h3>
+                    <p>La CONADEP presenta un informe que documenta las desapariciones y los centros clandestinos de detención.</p>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-year">1985</span>
+                    <h3>El Juicio a las Juntas</h3>
+                    <p>Se juzga a los principales responsables de las Juntas Militares por los crímenes cometidos durante la dictadura.</p>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-year">2003 — 2005</span>
+                    <h3>La recuperación de la justicia</h3>
+                    <p>Se avanza en la anulación de las leyes de impunidad y en la reapertura de los procesos judiciales.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- TESTIMONIOS -->
+        <section id="testimonios" class="testimonials-section">
+            <div class="section-heading">
+                <span>LAS VOCES DE LA MEMORIA</span>
+                <h2>Archivo de testimonios</h2>
+                <p>Historias, recuerdos y relatos que mantienen viva la memoria.</p>
+            </div>
+
+            <div class="search-container">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Buscar por nombre, historia o palabra clave..."
+                    aria-label="Buscar testimonios"
+                >
+            </div>
+
+            <div id="testimonialsContainer" class="testimonials-grid">
+                <!-- Los testimonios se generan dinámicamente con JavaScript -->
+            </div>
+
+            <p id="noResults" hidden>No se encontraron testimonios.</p>
+        </section>
+
+        <!-- GENERADOR DE TARJETA -->
+        <section id="participar" class="generator-section">
+            <div class="section-heading">
+                <span>UNA MEMORIA COLECTIVA</span>
+                <h2>Creá tu tarjeta conmemorativa</h2>
+                <p>Dejá un mensaje para mantener viva la memoria.</p>
+            </div>
+
+            <div class="generator-container">
+
+                <form id="cardForm">
+                    <label for="cardName">Tu nombre</label>
+                    <input type="text" id="cardName" placeholder="Escribí tu nombre">
+
+                    <label for="cardMessage">Tu mensaje</label>
+                    <textarea id="cardMessage" placeholder="¿Qué significa para vos mantener viva la memoria?"></textarea>
+
+                    <button type="submit">Generar tarjeta</button>
+                </form>
+
+                <div id="cardPreview" class="commemorative-card">
+                    <span>1976 — 2026</span>
+                    <h3>MEMORIA, VERDAD Y JUSTICIA</h3>
+                    <p id="previewMessage">Recordar es construir el futuro.</p>
+                    <p id="previewName">Tu nombre aparecerá aquí</p>
+                    <strong>NUNCA MÁS</strong>
+                </div>
+
+                <button id="downloadCard" type="button" hidden>
+                    Descargar tarjeta
+                </button>
+
+            </div>
+        </section>
+
+        <!-- FORMULARIO DE REFLEXIONES -->
+        <section class="participation-section">
+            <div class="section-heading">
+                <span>PARTICIPÁ</span>
+                <h2>Tu voz también construye memoria</h2>
+                <p>Compartí una reflexión sobre la importancia de recordar.</p>
+            </div>
+
+            <form id="reflectionForm" novalidate>
+
+                <label for="userName">Nombre</label>
+                <input type="text" id="userName" name="name" required>
+
+                <label for="userEmail">Correo electrónico</label>
+                <input type="email" id="userEmail" name="email" required>
+
+                <label for="userReflection">Tu reflexión</label>
+                <textarea id="userReflection" name="reflection" required></textarea>
+
+                <div id="formMessage" role="status" aria-live="polite"></div>
+
+                <button type="submit">Enviar reflexión</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <h2>NUNCA MÁS.</h2>
+        <p>50 años de Memoria, Verdad y Justicia.</p>
+        <p>24 de marzo de 1976 — 24 de marzo de 2026</p>
+    </footer>
+
+</body>
+</html>
